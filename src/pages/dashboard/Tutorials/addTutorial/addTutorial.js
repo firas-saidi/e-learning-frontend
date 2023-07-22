@@ -125,7 +125,7 @@ class AddTutorial extends Component {
                     <Query query={GET_CURRENT_USER}>
                         {({ data }) => {
 
-                            const UserID = data.getCurrentUser._id;
+                            const UserID = data?.getCurrentUser?._id;
                             this.state.userID = UserID
                             return (
                                 <Mutation
